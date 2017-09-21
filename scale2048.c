@@ -273,8 +273,10 @@ int main(int argc, char **argv) {
 	for (i = optind; i < argc; i++) {
 		if (strstr(argv[i], ".jpg") || strstr(argv[i], ".jpeg") || strstr(argv[i], ".JPG")) {
 			read_JPEG_file(argv[i]);
-		} else {
+		} else if (strstr(argv[i], ".png") || strstr(argv[i], ".PNG")) {
 			read_png(argv[i]);
+		} else {
+			fprintf(stderr, "Don't understand filename %s\n", argv[i]);
 		}
 	}
 }
