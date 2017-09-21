@@ -187,7 +187,7 @@ void print(struct node *n) {
 
 	print(n->left);
 	print(n->right);
-	printf("%06x %d %d %d\n", n->rgb, n->count, n->darkness, n->difference);
+	printf("%06lx %d %d %d\n", n->rgb, n->count, n->darkness, n->difference);
 }
 
 void process(unsigned char *image, int width, int height, int depth, char *filename,

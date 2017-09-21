@@ -9,6 +9,9 @@
 
 #define COLOR 3
 
+void process(unsigned char *image, int width, int height, int depth, char *filename,
+             int left, int top, int right, int bottom, int stable);
+
 char *num(char *start, int *out) {
 	for (; *start; start++) {
 		if (isdigit(*start)) {

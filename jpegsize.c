@@ -7,6 +7,9 @@
 #define ENOUGH 0.98
 #define MINIMUM 200
 
+void process(unsigned char *image, int width, int height, int depth, char *filename,
+	     int left, int top, int right, int bottom);
+
 char *num(char *start, int *out) {
 	for (; *start; start++) {
 		if (isdigit(*start)) {
